@@ -37,18 +37,52 @@ const reviews = [
     },
   ];
 
-  const img = document.getElementById('person-img');
-  const author = document.getElementById('author');
-  const job = document.getElementById('job');
-  const info = document.getElementById('info');
+  const img = document.getElementById("person-img");
+  const author = document.getElementById("author");
+  const job = document.getElementById("job");
+  const info = document.getElementById("info");
 
-  const prevBtn = document.querySelectorAll('.prev-btn')
-  const nextBtn = document.querySelectorAll('.next-btn')
-  const randomBtn = document.querySelectorAll('.random-btn')
+  const prevBtn = document.querySelector(".prev-btn")
+  const nextBtn = document.querySelector(".next-btn")
+  const randomBtn = document.querySelector(".random-btn")
 
   let currentItem = 0;
 
   //load initial item
-  window.addEventListener('DOMContentLoaded', ()=>{
-      console.log('moda sucka')
+  window.addEventListener("DOMContentLoaded", function () {
+      showPerson()
   })
+  
+  //show person based on item
+  function showPerson() {
+    const item = reviews[currentItem];
+    img.src = item.img;
+    author.textContent = item.name;
+    job.textContent = item.job;
+    info.textContent = item.text;
+  }
+
+  //next button
+  nextBtn.addEventListener("click", function () {
+      currentItem++;
+      if(currentItem > reviews.length - 1){
+        currentItem = 0
+      }
+      showPerson()
+  });
+  //prev button
+  prevBtn.addEventListener("click", function () {
+    currentItem--;
+    if(currentItem < 0){
+      currentItem = reviews.length-1;
+    }
+    showPerson()
+});
+
+// show random person
+randomBtn.addEventListener("click", function () {
+    console.log("hello");
+  
+    currentItem = Math.floor(Math.random() * reviews.length);
+    showPerson(currentItem);
+  });
