@@ -34,8 +34,8 @@ Variables
   --clr-grey-5: hsl(210, 22%, 49%);
   --clr-grey-6: hsl(209, 23%, 60%);
   --clr-grey-7: hsl(211, 27%, 70%);
-  --clr-grey-8: hsl(210, 31%, 80%);
-  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-8: rgb(188, 204, 220);
+  --clr-grey-9: rgb(218, 226, 236);
   --clr-grey-10: hsl(210, 36%, 96%);
   --clr-white: #fff;
   --clr-red-dark: hsl(360, 67%, 44%);
@@ -68,7 +68,7 @@ Global Styles
 }
 body {
   font-family: var(--ff-secondary);
-  background: var(--clr-grey-10);
+  background: var(--clr-grey-9);
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
@@ -222,13 +222,11 @@ nav {
 .social-icons {
   display: none;
 }
-/* BY DEFAULT HIDE LINKS */
 .links {
-  /* height: 0;
+  height: 0;
   overflow: hidden;
-  transition: var(--transition); */
+  transition: var(--transition);
 }
-/* TOGGLE CLASS */
 .show-links {
   height: 10rem;
 }
@@ -248,7 +246,6 @@ nav {
     display: none;
   }
   .links {
-    /* IMPORTANT TO ADD */
     height: auto;
     display: flex;
   }
