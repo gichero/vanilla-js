@@ -3,11 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Menu</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Menu</h1>
+    <section class="menu">
+        <!-- title -->
+        <div class="title">
+            <h2>Our Menu</h2>
+            <div class="underline"></div>
+        </div>
+        <!-- filter buttons -->
+        <div class="btn-container">
+            <button class="filter-btn" type="button">all</button>
+            <button class="filter-btn" type="button">breakfast</button>
+            <button class="filter-btn" type="button">lunch</button>
+            <button class="filter-btn" type="button">shakes</button>
+        </div>
+        <!-- menu items -->
+        <div class="section-center">
+            <!-- single item -->
+            <article class="menu-item">
+                <img src="./images/item-1.jpeg" class="photo" alt="item-info"/>
+                <div class="item-info">
+                    <header>  
+                        <h4>butter milk pancakes</h4>
+                        <h4 class="price">$10</h4>    
+                    </header>
+                    <p class="item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Assumenda nesciunt qui sunt vero dolore vel beatae odio ratione ut? 
+                        Eum?</p>
+                </div>  
+                
+            </article>
+            <!-- end single item -->
+        </div>
+    </section>
     <script src="https://kit.fontawesome.com/25f2010540.js" crossorigin="anonymous"></script>
     <script src="app.js"></script>    
 </body>
