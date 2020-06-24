@@ -11,9 +11,7 @@ questions.forEach( (question)=>{
             }
         })
         question.classList.toggle("show-text")
-    })
-    
-    
+    })  
 })
 
 //traversing the DOM
