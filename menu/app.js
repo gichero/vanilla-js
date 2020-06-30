@@ -88,15 +88,11 @@ const menu = [
   const sectionCenter = document.querySelector(".section-center");
   const container = document.querySelector(".btn-container")
 
-  //load menu
+  //load menu and buttons
   window.addEventListener("DOMContentLoaded", ()=>{
        displayMenuItems(menu);
-       displayMenuBtns()
-       
-       
+       displayMenuBtns()       
   });
-
-  
 
   const displayMenuItems = (menuItems) =>{
     let displayMenu = menuItems.map( (item)=>{
@@ -112,11 +108,10 @@ const menu = [
              </div>     
         </article>`)
       });
-      displayMenu = displayMenu.join("")
+      displayMenu = displayMenu.join("")//do not use single quotes here, it'll not display content
       sectionCenter.innerHTML = displayMenu
   }
   const displayMenuBtns = () =>{
-
     const categories = menu.reduce( (values, item)=>{
         if(!values.includes(item.category)) {
             values.push(item.category)
@@ -127,9 +122,9 @@ const menu = [
         return (`<button class="filter-btn" type="button" data-id=${category}>${category}</button>`) 
     }).join("");
     container.innerHTML = categoryBtns
-    const filterBtns = document.querySelectorAll(".filter-btn");
-
+    
     //filter buttons
+    const filterBtns = document.querySelectorAll(".filter-btn");
      filterBtns.forEach( (btn)=>{
          btn.addEventListener('click', (e)=>{
              console.log(e.currentTarget.dataset.id);
