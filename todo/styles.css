@@ -49,7 +49,7 @@ Variables
   --spacing: 0.25rem;
   --radius: 0.5rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   --max-width: 1170px;
   --fixed-width: 620px;
 }
@@ -68,7 +68,7 @@ Global Styles
 }
 body {
   font-family: var(--ff-secondary);
-  background: var(--clr-grey-10);
+  background: var(--clr-primary-2);
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
@@ -182,7 +182,7 @@ Grocery List
 ===============
 */
 .section-center {
-  background: var(--clr-white);
+  background: var(--clr-primary-9);
   border-radius: var(--radius);
   box-shadow: var(--light-shadow);
   transition: var(--transition);
@@ -291,7 +291,7 @@ Grocery List
   background: transparent;
   border-color: transparent;
   cursor: pointer;
-  font-size: 0.7rem;
+  font-size: 1rem;
   margin: 0 0.15rem;
   transition: var(--transition);
 }
@@ -317,7 +317,7 @@ Grocery List
   border-color: transparent;
   color: var(--clr-red-light);
   margin: 0 auto;
-  font-size: 0.85rem;
+  font-size: 1.1rem;
   letter-spacing: var(--spacing);
   cursor: pointer;
   transition: var(--transition);
